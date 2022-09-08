@@ -46,7 +46,7 @@ app.post("/try2", (req, res) =>{
   var str = req.body;
   const jobNumber = req.body.jobNumber;
   const notes = req.body.Notes;
-  res.send(jobNumber,notes,str)
+  res.send({jobNumber,notes,str})
 });
 
 
