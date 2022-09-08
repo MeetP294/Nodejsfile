@@ -1,0 +1,33 @@
+@import "../../themes/sbca-global-colors.less";
+
+ul.nav-tabs {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #dddddd;
+  display: inline-block;
+  width: 100%;
+  padding: 0;
+
+  > li {
+    float: left;
+    position: relative;
+    display: block;
+
+    > a {
+      margin-right: 2px;
+      line-height: 1.42857143;
+      border: 1px solid transparent;
+      border-radius: 0 0 0 0;
+      position: relative;
+      display: block;
+      padding: 10px 15px;
+    }
+
+    &.active > a {
+      color: #555555;
+      background-color: #ffffff;
+      border: 1px solid #dddddd;
+      border-bottom-color: transparent;
+      cursor: default;
+    }
+  }
+}

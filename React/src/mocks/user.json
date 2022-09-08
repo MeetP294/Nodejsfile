@@ -1,0 +1,43 @@
+{
+  "addresses": [
+    {
+      "location": "23 Main Street, San Francisco, CA 94105",
+      "other": "Suite #2",
+      "id": 1
+    },
+    {
+      "location": "44 Other Street, Berkeley, CA 83939",
+      "other": "Suite #2",
+      "id": 2
+    }
+  ],
+
+  "payment": [
+    { "lastFour": "Ends in 1056", "expiry": "01/22", "id": 1 },
+    { "lastFour": "Ends in 8888", "expiry": "04/12", "id": 2 }
+  ],
+
+  "orders": [
+    {
+      "key": "1",
+      "date": "24 Apr 2020",
+      "venue": "Brooklyn Kitchen",
+      "amount": 101.35,
+      "newOrder": "brooklyn-kitchen"
+    },
+    {
+      "key": "2",
+      "date": "15 Apr 2020",
+      "venue": "Sundays Kitchen",
+      "amount": 55.05,
+      "newOrder": "sundays-kitchen"
+    },
+    {
+      "key": "3",
+      "date": "17 Mar 2020",
+      "venue": "Knives over Forks",
+      "amount": 16.96,
+      "newOrder": "knives-over-forks"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+@import "../themes/sbca-global-colors.less";
+
+.MenuItemForm {
+  @media (max-width: 450px) {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+    .lightbox__footer {
+      flex-direction: column;
+      padding: 12px;
+    }
+    .lightbox__select-quantity {
+      justify-content: center;
+      margin: 0px;
+      margin-bottom: 12px;
+    }
+
+    .lightbox__add-button {
+    }
+
+    & > * {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__modifier-group {
+    margin-bottom: 12px;
+    margin-top: 12px;
+  }
+}
+
+.MenuItemForm__modifier-group-label {
+  color: @brand;
+  font-size: 10px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: uppercase;
+}
+
+.MenuItemForm__modifiers-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  .ant-row {
+    height: 24px;
+  }
+
+  .ant-checkbox-wrapper + .ant-checkbox-wrapper {
+    margin-left: 0px;
+  }
+}

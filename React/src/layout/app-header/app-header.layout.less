@@ -1,0 +1,55 @@
+@import "../../themes/sbca-global-colors.less";
+
+.app-banner {
+  height: 241px;
+  background-position: center;
+  background-size: cover;
+
+  > .ant-row {
+    height: 100%;
+
+    > .ant-col {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      flex-flow: column;
+    }
+  }
+}
+
+.app-banner__title {
+  flex: 0;
+  font-family: Kaleko105;
+  font-size: 40px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: @white;
+  padding-left: 50px;
+  margin-bottom: 39px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.app-order__container {
+  margin-top: 40px;
+
+  .site-card-border-less-wrapper {
+    text-align: center;
+    .order-card {
+      display: inline-block;
+    }
+  }
+}
+a.ant-btn {
+  &.order__button,
+  &.start__order__button {
+    height: 40px;
+    padding-top: 4px;
+    font-size: 1.2em;
+  }
+}

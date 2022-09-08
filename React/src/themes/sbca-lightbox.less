@@ -1,0 +1,114 @@
+@import "./sbca-global-colors.less";
+
+// Lightbox
+
+.lightbox__title {
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #29303a;
+}
+
+.lightbox__description {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: #29303a;
+}
+
+.lightbox__ingredients, .lightbox__label {
+  font-size: 10px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #97acb2;
+  text-transform: uppercase;
+}
+
+.lightbox__label {
+  color: @brand;
+  margin-top: 20px;
+}
+
+.lightbox {
+  .ant-modal-header {
+    border: none;
+    padding-bottom: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    .ant-modal-title {
+      margin-top: 20px;
+      height: 24px;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+  .ant-modal-body {
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .ant-modal-footer {
+    display: none;
+  }
+}
+
+.lightbox__quantity {
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: @brand;
+  width: 56px;
+  padding: 8px 15px;
+  margin: 2px 0 0;
+}
+
+.lightbox__button {
+  background-color: @light-gray;
+  border: none;
+}
+.lightbox__add-button {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 8px 15px;
+  height: auto;
+
+  &:disabled {
+    background-color: #d2ddd8;
+    color: @white;
+    border: none;
+    padding: 8px 15px;
+    &:hover {
+      background-color: #d2ddd8;
+      color: @white;
+      border: none;
+    }
+  }
+}
+
+.lightbox__account-settings {
+  .lightbox__footer {
+    text-align: center;
+    display: block;
+    .ant-btn.large-button {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+  }
+}

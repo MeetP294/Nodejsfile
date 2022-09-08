@@ -1,0 +1,36 @@
+@import "../../themes/sbca-global-colors.less";
+
+.app-account-menu-inner {
+  .ant-menu-inline .ant-menu-item:not(:last-child) {
+    margin: 0;
+  }
+  .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: transparent;
+  }
+  .app-account-menu > .ant-menu-item.ant-menu-item-only-child {
+    border-left: none;
+  }
+  .ant-menu-inline > .ant-menu-item {
+    padding: 20px !important;
+    height: unset;
+    border-bottom: 1px solid @light-gray;
+    margin: 0;
+  }
+}
+
+.app-account-menu {
+  font-size: 18px;
+  border-left: 1px solid @light-gray;
+  top: 0;
+  height: 62vh;
+  overflow: auto;
+  > .ant-menu-item.ant-menu-item-only-child {
+    font-size: 18px;
+    border-left: 1px solid @light-gray;
+    top: 0;
+  }
+}
+// Required on account settings pages
+.account-settings-wrapper .app-footer-wrapper {
+  margin-top: 0;
+}

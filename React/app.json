@@ -1,0 +1,21 @@
+{
+  "buildpacks": [
+    {
+      "url": "mars/create-react-app"
+    }
+  ],
+  "environments": {
+    "review": {
+      "env": {
+        "REACT_APP_API_URL": "https://docs2.sbcacomponents.com",
+        "REACT_APP_GOOGLE_CLIENT_ID": "357169123212-s7tvq1526drterrrjshbfj6c8lnh4irm.apps.googleusercontent.com"
+      }
+    },
+    "production": {
+      "env": {
+        "REACT_APP_API_URL": "https://docs2.sbcacomponents.com",
+        "REACT_APP_GOOGLE_CLIENT_ID": "357169123212-s7tvq1526drterrrjshbfj6c8lnh4irm.apps.googleusercontent.com"
+      }
+    }
+  }
+}

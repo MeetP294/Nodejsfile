@@ -1,0 +1,33 @@
+{
+  "184": {
+    "order_id": "184",
+    "type": "taters",
+    "start_date": "2020-08-17 05:12:00",
+    "end_date": "2020-08-17 05:25:00",
+    "order_total": "0.00",
+    "event_id": "132",
+    "gratuity_percentage": "20.00",
+    "gratuity_amount": "0.00",
+    "tax": "5.00",
+    "tax_amount": "0.00",
+    "order_items": [
+      {
+        "productID": "189",
+        "orderItemId": "218",
+        "title": "santa barbara uni",
+        "quantity": "0.00",
+        "price": "0.00",
+        "currency": "USD",
+        "variants": "201",
+        "instructions": "testing",
+        "subtotal": "0.00",
+        "modifier": [
+          {
+            "name": "White Rice",
+            "price": "0.00"
+          }
+        ]
+      }
+    ]
+  }
+}

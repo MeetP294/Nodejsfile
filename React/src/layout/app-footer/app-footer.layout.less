@@ -1,0 +1,29 @@
+@import "../../themes/sbca-global-colors.less";
+
+footer.footer {
+  background-color: @black;
+  color: @white;
+  padding: 35px 0 36px;
+  margin-top: 3em;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  clear: both;
+
+  @media (max-width: 767px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  p {
+    font-size: 18.4px;
+    color: @white;
+    line-height: 32px;
+  }
+
+  .text-right {
+    @media (max-width: 767px) {
+      text-align: left;
+    }
+  }
+}

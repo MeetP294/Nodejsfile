@@ -1,0 +1,84 @@
+@import "../../themes/sbca-global-colors.less";
+
+.AuthForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0px 10px;
+  padding-top: 30px;
+  .AuthForm__title {
+    text-align: center;
+  }
+  img {
+    width: 130px;
+  }
+
+  & > * {
+    width: 95%;
+    max-width: 400px;
+
+    @media (max-width: 767px) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  label {
+    text-align: left;
+    color: @brand;
+    text-transform: uppercase;
+    font-size: 1em;
+  }
+
+  input {
+    display: block;
+  }
+
+  & > input,
+  .ant-input-affix-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .MyForm__btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 50px;
+    width: 100%;
+  }
+  .AuthForm__btn--catch-all {
+    background-color: @brand;
+    color: white;
+  }
+  .AuthForm__btn--facebook {
+    background-color: @facebook;
+    color: white;
+  }
+  .AuthForm__btn--google {
+    svg {
+      color: @brand;
+    }
+  }
+  .AuthForm__guest {
+    color: @brand;
+    text-align: center;
+  }
+  .AuthForm__separator {
+    color: #9b9b9b;
+    text-align: center;
+    &::after {
+      content: "-";
+      color: inherit;
+    }
+    &::before {
+      content: "-";
+      color: inherit;
+    }
+  }
+  .AuthForm__footer {
+    text-align: center;
+  }
+}

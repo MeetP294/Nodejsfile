@@ -1,0 +1,125 @@
+@import "./bootstrap/dist/css/bootstrap.css";
+@import "./sbca-global-colors.less";
+@import "./sbca-lightbox.less";
+@import "./sbca-buttons.less";
+@import "./sbca-card.less";
+
+body {
+  font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.42857143;
+  color: #222222;
+  background-color: @white;
+}
+
+.brand-color {
+  color: @brand;
+}
+
+.ant-layout {
+  background-color: @white;
+}
+
+.hide {
+  display: none !important;
+}
+
+div.ant-message {
+  top: 90px;
+  z-index: 1000;
+}
+
+hr {
+  border-top: @light-gray;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.ant-modal {
+  top: 20px;
+}
+
+input.ant-input,
+input {
+  min-height: 44px;
+
+  &:hover,
+  &:focus {
+    border-color: @red;
+    box-shadow: 0 0 0 2px rgba(237, 48, 59, 0.20);
+  }
+}
+
+p {
+  font-size: 1.15em;
+  margin: 0 0 10.5px;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+h2 {
+  font-weight: bold;
+  color: @red-text;
+  font-size: 1.8em;
+}
+
+ul {
+  li {
+    font-size: 1.15em;
+  }
+}
+
+.text-center {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 21px;
+  font-size: 16px;
+
+  th {
+    vertical-align: bottom;
+    border-bottom: 2px solid @lighter-gray;
+    padding: 8px;
+    line-height: 1.42857143;
+    font-weight: 700;
+  }
+
+  td {
+    padding: 8px;
+    line-height: 1.42857143;
+    font-weight: normal;
+    vertical-align: top;
+    border-top: 1px solid @lighter-gray;
+  }
+}
+
+.app-order__location {
+  margin: 16px 0 0;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: @blueish-black;
+
+  a {
+    text-decoration: underline;
+    color: inherit;
+  }
+}
+
+.no-margin {
+  margin: 0 !important;
+}

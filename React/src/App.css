@@ -1,0 +1,140 @@
+@media (min-width:  1024px) {
+  section.ant-layout.layout + .container {
+    min-height: 65vh;
+  }
+}
+
+.container {
+  position: relative;
+}
+
+.container .loader {
+  align-items: center;
+  justify-content: center;
+}
+
+.containor {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 43px;
+  padding: 10px 18px;
+  font-size: 15px;
+  line-height: 1.42857143;
+  color: #222222;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 0;
+  box-shadow: inset 0 1px 1px rgb(0 0 0%);
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.red {
+  color: red;
+}
+
+.table-responsive {
+  width: 100%;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.table-responsive table {
+  width: 100%;
+}
+
+.radio_Group {
+  display: flex;
+  flex-direction: row;
+}
+input[type="radio"], input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  line-height: normal;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.radio_Group lable {
+  margin-top: 15px;
+  margin-left: 5px;
+}
+
+.TestMode {
+  float: left;
+  padding:10px
+}
+
+.ApplyFilter {
+  float: left;
+  padding:10px;
+  padding-top: 22px;
+}
+
+.Filter {
+  height: 80px;
+}
+
+.inline-text {
+  display: flex;
+  flex-direction: flex-start;
+}
+
+div.MuiInputBase-root {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border-radius: 0;
+}
+
+div.MuiInputBase-root input {
+  font-size: 15px;
+  height: 30px !important;
+  min-height: auto;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.mt30 {
+  margin-top: 30px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.mb30 {
+  margin-bottom: 30px;
+}
+
+div[data-testid="three-dots-loading"] {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
