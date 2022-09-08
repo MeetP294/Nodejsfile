@@ -46,8 +46,7 @@ app.post("/try2", (req, res) =>{
   var str = req.body;
   const jobNumber = req.body.jobNumber;
   const notes = req.body.Notes;
-  const notesLength = notes.replace(/(.{70})/g, "$1\n");
-  res.send(jobNumber,notes,notesLength)
+  res.send(jobNumber,notes,str)
 });
 
 
