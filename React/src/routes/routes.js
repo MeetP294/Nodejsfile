@@ -16,19 +16,14 @@ import UserForm from "../templates/Account/UserForm";
 import UserDetail from "../templates/Account/UserDetail";
 import ContactForm from "../templates/Pages/ContactForm";
 import PackagesEditForm from "../templates/Pages/PackagesEditForm";
+import pdfContoller from "../../../Node/controllers/pdfController"
 
 const ROUTES = [
   {
-    path: "/home",
+    path: "/",
     key: "HOME",
     exact: true,
     component: HomeTemplate,
-  },
-  {
-    path: "/",
-    key: "REDIRECT",
-    exact: true,
-    component: () => <Redirect to="/home" />,
   },
   {
     path: "/user/login",
@@ -131,7 +126,7 @@ const ROUTES = [
     key: "Userid",
     exact: false,
     component: PackagesEditForm,
-  },
+  }
 ];
 
 export default ROUTES;
