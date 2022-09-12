@@ -45,7 +45,7 @@ app.get("/try1", (req, res) => res.send("Hello World with Express"));
 app.post("/try2", (req, res) =>{
   const data=req.body.jobNumber
  
-  res.send(data,"xxxxx",req.method==="POST")
+  res.status(200).send({ message: 'Only POST requests allowed',v:data})
 });
 
 
