@@ -16,7 +16,6 @@ import UserForm from "../templates/Account/UserForm";
 import UserDetail from "../templates/Account/UserDetail";
 import ContactForm from "../templates/Pages/ContactForm";
 import PackagesEditForm from "../templates/Pages/PackagesEditForm";
-import pdfContoller from "../../../Node/controllers/pdfController"
 
 const ROUTES = [
   {
