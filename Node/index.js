@@ -36,9 +36,9 @@ app.get("/", (req, res) => res.send("Hello World with Express"));
 // Send message for default URL
 app.get("/try1", (req, res) => res.send("Hello World with Express"));
 app.post("/try2", (req, res) =>{
-  const data=req.body.jobNumber
+  const data=req.body
  
-  res.status(200).send({ message: 'Only POST requests allowed',v:data})
+  res.status(200).send({ message: req.method})
 });
 
 app.get('*', (req, res) => {
