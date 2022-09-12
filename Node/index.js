@@ -40,7 +40,11 @@ app.post("/try2", (req, res) =>{
  
   res.status(200).send({ message: req.method})
 });
-
+app.post("/try3", (req, res) =>{
+  const data=req.body
+ 
+  res.status(200).send({ data})
+});
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../React/build', 'index.html'));
 });
