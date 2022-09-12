@@ -3,15 +3,6 @@ const bodyParser = require("body-parser");
 const pdfRoutes = require("./routes/pdfRoutes");
 const path = require("path");
 
-
-
-
-const { PDFDocument, StandardFonts, rgb } = require("pdf-lib");
-const fs = require("fs");
-const download = require("download");
-var url = require("url");
-
-
 // Import Cors
 const cors = require("cors");
 
@@ -41,14 +32,14 @@ var port = process.env.PORT || 3001;
 app.use(pdfRoutes);
    
 // Send message for default URL
+app.get("/", (req, res) => res.send("Hello World with Express"));
+// Send message for default URL
 app.get("/try1", (req, res) => res.send("Hello World with Express"));
 app.post("/try2", (req, res) =>{
   const data=req.body.jobNumber
  
   res.status(200).send({ message: 'Only POST requests allowed',v:data})
 });
-
-
 
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../React/build', 'index.html'));

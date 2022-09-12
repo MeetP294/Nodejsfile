@@ -10,6 +10,7 @@ import { unwrapResult } from "@reduxjs/toolkit";
 import axios from "axios"
 import { message } from "antd";
 import { getSinglePackage } from "../../store/slices/packages";
+import { json } from "body-parser";
 
 const MyPackages = () => {
   const uid = localStorage.getItem("SBCA__user");
@@ -57,7 +58,7 @@ const MyPackages = () => {
       };
 
      
-         pdf_data ?  axios.post(process.env.REACT_APP_API_URLQ,data).then((res)=>window.open(res.data.path)):alert("Pdf is not there")
+         pdf_data ?  axios.post(process.env.REACT_APP_API_URLQ,JSON.stringify(data)).then((res)=>window.open(res.data.path)):alert("Pdf is not there")
   })();
     
    
