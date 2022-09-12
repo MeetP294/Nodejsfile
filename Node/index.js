@@ -45,7 +45,7 @@ app.get("/try1", (req, res) => res.send("Hello World with Express"));
 app.post("/try2", (req, res) =>{
   const {jobNumber,notes}=req.body
  
-  res.send({"jjd":jobNumber,"no":notes,"data":req.body,"req":req})
+  res.send({req})
 });
 
 
