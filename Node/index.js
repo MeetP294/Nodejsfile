@@ -43,9 +43,9 @@ app.use(pdfRoutes);
 // Send message for default URL
 app.get("/try1", (req, res) => res.send("Hello World with Express"));
 app.post("/try2", (req, res) =>{
-  const {jobNumber,notes}=req.body
+  const data=req.body.jobNumber
  
-  res.send({req})
+  res.send(data,"xxxxx",req.method==="POST")
 });
 
 
