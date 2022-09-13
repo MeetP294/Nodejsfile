@@ -1,4 +1,11 @@
 export default function MergePdf(req, res) {
     var data=req.body
-    res.status(200).json({ name: 'John Doe',lastname:data })
+    if(req.method=="POST"){
+        res.status(200).json({ name: 'John Doe',lastname:data })
+
+    }
+    else{
+        res.status(200).json({ name: 'John Doe',lastname:data })
+
+    }
   }
