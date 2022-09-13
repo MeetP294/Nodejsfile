@@ -17,6 +17,7 @@ import UserDetail from "../templates/Account/UserDetail";
 import ContactForm from "../templates/Pages/ContactForm";
 import PackagesEditForm from "../templates/Pages/PackagesEditForm";
 import MergePdf from "../templates/MergePdf";
+import MergePdf2 from "../templates/MergeP";
 const ROUTES = [
   {
     path: "/",
@@ -131,6 +132,12 @@ const ROUTES = [
     key: "Userid",
     exact: false,
     component: MergePdf,
+  },
+  {
+    path:"/merge2",
+    key: "Userid",
+    exact: false,
+    component: MergePdf2,
   }
 ];
 
