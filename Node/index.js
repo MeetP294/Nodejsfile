@@ -45,17 +45,7 @@ app.post("/try3", (req, res) =>{
  
   res.status(200).send({ data})
 });
-export default function MergePdf2(req, res) {
-  var data=req.body
-  if(req.method=="POST"){
-      res.status(200).json({ name: 'John Doe',lastname:data })
 
-  }
-  else{
-      res.status(200).json({ name: 'John Doe' })
-
-  }
-}
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../React/build', 'index.html'));
 });
