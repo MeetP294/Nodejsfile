@@ -25,8 +25,6 @@ const tagManagerArgs = {
 TagManager.initialize(tagManagerArgs);
 
 const store = configureAppStore();
-// function App({ globalSettings, checkUserAuthStatus }) {
-// const { venueId } = useParams();
 
 function App({ checkUserAuthStatus }) {
   React.useEffect(() => {

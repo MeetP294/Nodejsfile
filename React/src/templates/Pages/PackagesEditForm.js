@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router";
+import { NavLink } from "react-router-dom";
 import SelectState from "../../common/SelectState";
 import {  useDispatch } from "react-redux";
 import classNames from "classnames";
@@ -157,11 +158,25 @@ const[val2,setVal2]=useState()
     return Object.values(err).length < 1 && true;
   };
 
+  const subscriber = data?.field_subscriber_reference
+  const subscriber_url = subscriber !== "" ? subscriber?.toLowerCase().replace(/ /g, "-") : "qualtim"
+  const package_url = `/package/${subscriber_url}/${data.id}`
+
+  console.log(data);
+
   ;return (
     <>
-       {
-       !(data.title) ? <ThreeDots className="loader" color="#DDDDDD" height={50} width={50} /> : <>
-        <h1>{title}</h1>
+      {
+        !(data.title) ? <ThreeDots className="loader" color="#DDDDDD" height={50} width={50} /> : <>
+        <h1 className="page-header">{title}</h1>
+        <ul className="nav-tabs">
+          <li><NavLink to={{ pathname: package_url }}>View</NavLink></li>
+          <li className="active">
+            <NavLink to={{ pathname: `/package/edit`, state: {id:data?.id,title:data?.title}}}>
+              Edit
+            </NavLink>
+          </li>
+        </ul>
         <form>
           <div
             className={classNames(

@@ -10,6 +10,7 @@ body {
   line-height: 1.42857143;
   color: #222222;
   background-color: @white;
+  word-break: break-word;
 }
 
 .brand-color {
@@ -55,22 +56,35 @@ input {
 p {
   font-size: 1.15em;
   margin: 0 0 10.5px;
+  line-height: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Source Sans Pro",Calibri,Candara,Arial,sans-serif;
+  font-weight: 300;
+  line-height: 1.1;
+  color: inherit;
 }
 
 h1 {
   font-weight: bold;
 }
 
-h2 {
+h3 {
   font-weight: bold;
-  color: @red-text;
-  font-size: 1.8em;
 }
+
 
 ul {
   li {
     font-size: 1.15em;
   }
+}
+
+iframe,
+picture,
+figure {
+  max-width: 100%;
 }
 
 .text-center {

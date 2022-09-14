@@ -40,7 +40,7 @@ function HomeTemplate(props) {
  
   return (
     <div className="main-wrapper">
-      <div className="col-md-12 app-page--baner">
+      <div className="app-page--baner home">
         { !home ?
           <ThreeDots className="loader" color="#DDDDDD" height={50} width={50} />
           :

@@ -34,3 +34,42 @@
 .account-settings-wrapper .app-footer-wrapper {
   margin-top: 0;
 }
+
+main > #page-header {
+  @media (min-width: 1200px) {
+    margin-bottom: 10px;
+  }
+
+  .ant-menu-horizontal {
+    padding-bottom: 13px;
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  li {
+    border: none;
+    margin: 0;
+
+    &.ant-menu-item:not(:last-of-type):not(.logout-btn):not(.login) {
+      border-right: 1px solid #000;
+    }
+
+    &.logout-btn {
+      height: 20px;
+      display: inline-block;
+      line-height: normal;
+    }
+
+    &:hover  {
+      background-color: #e6e6e6;
+    }
+
+    a {
+      font-size: 14.72px;
+      line-height: normal;
+      padding: 1px 10px;
+    }
+  }
+}

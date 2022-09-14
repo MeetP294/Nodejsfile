@@ -1,7 +1,7 @@
 import React from 'react';
 import "./app-top-nav.layout.less";
 import { BrowserView, MobileView } from "react-device-detect";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Layout, Menu } from "antd";
 import classNames from "classnames";
 import {
@@ -15,10 +15,40 @@ import { connect } from "react-redux";
 
 const { Header, Content } = Layout;
 const { SubMenu } = Menu;
+
+function debounce(fn, ms) {
+  let timer
+  return _ => {
+    clearTimeout(timer)
+    timer = setTimeout(_ => {
+      timer = null
+      fn.apply(this, arguments)
+    }, ms)
+  };
+}
   
 const AppTopNav = (props) => {
 	// Collapse isOpen State
   const [isOpen, setIsOpen] = React.useState(false);
+  const [dimensions, setDimensions] = React.useState({ 
+    height: window.innerHeight,
+    width: window.innerWidth
+  });
+
+  React.useEffect(() => {
+    const debouncedHandleResize = debounce(function handleResize() {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth
+      })
+    }, 1000)
+
+    window.addEventListener('resize', debouncedHandleResize)
+
+    return _ => {
+      window.removeEventListener('resize', debouncedHandleResize)
+    }
+  }, [dimensions]);
 
   const {
     isLoggedIn
@@ -34,7 +64,7 @@ const AppTopNav = (props) => {
         )}>
         <Container>
           <div className="navbar-header">
-            <Link
+            <NavLink
               className={classNames(
                 "logo",
                 "pull-left"
@@ -43,7 +73,7 @@ const AppTopNav = (props) => {
               title="Home"
             >
               <img alt="SBCA Docs" src={props.sitewide ? props.sitewide.data.banner : '/'} />
-            </Link>
+            </NavLink>
             <MobileView>
               <NavbarToggler onClick={() => { setIsOpen(!isOpen) }} className="navbar-toggle">
               	<span className="sr-only">Toggle navigation</span>
@@ -73,23 +103,23 @@ const AppTopNav = (props) => {
 	            >
 	            {isLoggedIn ? (
 	            	<Menu.Item key="/my-packages">
-		              <Link to="/my-packages">My Packages</Link>
+		              <NavLink activeClassName="active" to="/my-packages">My Packages</NavLink>
 		            </Menu.Item>	
 	            ) : ''}
 	            <Menu.Item key="/pricing">
-	              <Link to="/pricing">Pricing</Link>
+	              <NavLink activeClassName="active" to="/pricing">Pricing</NavLink>
 	            </Menu.Item>
 	              <SubMenu
 	                key="sub1"
 	                title="About"
 	              >
 	                <Menu.Item key="/about">
-	                  <Link to="/about">What is SBCAdocs?</Link>
+	                  <NavLink activeClassName="active" to="/about">What is SBCAdocs?</NavLink>
 	                </Menu.Item>
 	                <Menu.Item key="/how-to">
-	                  <Link to="/how-to">
+	                  <NavLink activeClassName="active" to="/how-to">
 	                    How To Use the System
-	                  </Link>
+	                  </NavLink>
 	                </Menu.Item>
 	              </SubMenu>
 	            </Menu>
@@ -100,7 +130,7 @@ const AppTopNav = (props) => {
               "navbar-collapse",
               "collapsed"
             )}>
-		        <Collapse isOpen={isOpen} navbar className="mobile-menu">
+		        <Collapse isOpen={isOpen} navbar className={dimensions.width < 768 ? 'mobile-menu' : ''}>
 		          <Menu
 	              className={classNames(
 	                "menu",
@@ -113,20 +143,25 @@ const AppTopNav = (props) => {
 	              selectedKeys={window.location.pathname}
 	              onClick={(...args) => console.log(args)}
 	            >
-	            <Menu.Item key="/pricing">
-	              <Link to="/pricing">Pricing</Link>
+              {isLoggedIn ? (
+                <Menu.Item key="/my-packages" onClick={() => { setIsOpen(!isOpen) }}>
+                  <NavLink activeClassName="active" to="/my-packages">My Packages</NavLink>
+                </Menu.Item>  
+              ) : ''}
+	            <Menu.Item key="/pricing" onClick={() => { setIsOpen(!isOpen) }}>
+	              <NavLink activeClassName="active" to="/pricing">Pricing</NavLink>
 	            </Menu.Item>
 	              <SubMenu
 	                key="sub1"
 	                title="About"
 	              >
-	                <Menu.Item key="/about">
-	                  <Link to="/about">What is SBCAdocs?</Link>
+	                <Menu.Item key="/about" onClick={() => { setIsOpen(!isOpen) }}>
+	                  <NavLink activeClassName="active" to="/about">What is SBCAdocs?</NavLink>
 	                </Menu.Item>
-	                <Menu.Item key="/how-to">
-	                  <Link to="/how-to">
+	                <Menu.Item key="/how-to" onClick={() => { setIsOpen(!isOpen) }}>
+	                  <NavLink activeClassName="active" to="/how-to">
 	                    How To Use the System
-	                  </Link>
+	                  </NavLink>
 	                </Menu.Item>
 	              </SubMenu>
 	            </Menu>

@@ -23,8 +23,8 @@ console.log(uid,userData,SubscriberInfo);
   return (
     <>
   
-      <div className="col-md-12 user-detail--wrapper">
-        <h1>{userData?.name}</h1>
+      <div className="user-detail--wrapper">
+        <h1 className="page-header">{userData?.name}</h1>
         <ul className="nav-tabs">
           <li className="active"><NavLink to="/user">View</NavLink></li>
           <li><NavLink to="/user/edit">Edit</NavLink></li>
@@ -57,7 +57,7 @@ console.log(uid,userData,SubscriberInfo);
 
       <div className="PreviewTable table-responsive">
 
-        <h2>Subscription Information</h2>
+        <h2 className="sub-header">Subscription Information</h2>
 
         <table>
           <thead>

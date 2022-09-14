@@ -33,18 +33,6 @@ app.use(pdfRoutes);
    
 // Send message for default URL
 app.get("/", (req, res) => res.send("Hello World with Express"));
-// Send message for default URL
-app.get("/try1", (req, res) => res.send("Hello World with Express"));
-app.post("/try2", (req, res) =>{
-  const data=req.body
- 
-  res.status(200).send({ message: req.method})
-});
-app.post("/try3", (req, res) =>{
-  const data=req.body
- 
-  res.status(200).send({ data})
-});
 
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../React/build', 'index.html'));

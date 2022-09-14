@@ -32,15 +32,15 @@ function DefaultTemplate(props) {
   return (
     <div className="main-wrapper">
      
-          <div className="col-md-12 app-page--wrapper">
+          <div className="app-page--wrapper">
             { !sitewide.data.node[`${current_page}`] ?
               <ThreeDots className="loader" color="#DDDDDD" height={50} width={50} />
               :
               sitewide.data.node[`${current_page}`] &&
-                <div className="row">
-                  <h1 className="app-page--title">{ sitewide.data.node[`${current_page}`].title[0].value }</h1>
+                <>
+                  <h1 className="page-header">{ sitewide.data.node[`${current_page}`].title[0].value }</h1>
                   <div dangerouslySetInnerHTML={{ __html: sitewide.data.node[`${current_page}`].body[0].value }} />
-                </div>
+                </>
             }
           </div>
       

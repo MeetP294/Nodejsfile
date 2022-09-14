@@ -16,9 +16,14 @@ export const getDocuCollections = createAsyncThunk(
 export const getDocuCollection = createAsyncThunk(
   "package/get-docu-collection",
   async (nid, thunkAPI) => {
-    const res = await API.request(`api/v1/collection/${nid}`, {
+    let url = `api/v1/collection/${nid}`;
+    if(typeof nid === 'string') {
+      url = `api/v1/collection/alias?alias="/content/${nid}"`;
+    }
+    const res = await API.request(url, {
       queryParams: { _format: "json" },
     });
+    console.log(res);
     return res;
   }
 );

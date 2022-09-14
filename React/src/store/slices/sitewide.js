@@ -37,6 +37,9 @@ export const getPage = createAsyncThunk(
         case 'help':
           nid = 393335;
           break;
+        case 'collections':
+          nid = 393343;
+          break;
         default:
           nid = 393332;
           break;

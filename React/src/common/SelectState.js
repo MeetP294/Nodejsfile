@@ -4,7 +4,7 @@ const SelectState = ({method,data1,val}) => {
   return (
     <>
      <select value={val} className='form-control' onChange={(e)=>{method({...data1,administrative_area:e.target.value})}}>
-      <option value={""}>select</option>
+      <option value={""}>- Select -</option>
     <option value="AL">Alabama</option>
     <option value="AK">Alaska</option>
     <option value="AZ">Arizona</option>

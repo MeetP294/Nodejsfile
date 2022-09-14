@@ -1,7 +1,26 @@
 @import "../../themes/sbca-global-colors.less";
 
 .app-page--baner {
-  margin-top: 25px;
+  width: 100%;
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &.home {
+    @media (min-width: 768px) and (max-width: 1024px) {
+      margin-top: 10px;
+    }
+
+    h1.page-header {
+      font-weight: bold;
+      color: #bf2c37;
+      font-size: 1.8em;
+      margin-top: 50px;
+      margin-bottom: 0;
+    }
+  }
 
   p {
     line-height: 1.75em;
@@ -37,6 +56,14 @@
   &--coid {
     display: flex;
     align-items: flex-start;
+
+    label {
+      margin-bottom: 0;
+    }
+  }
+
+  &.container {
+    padding: 0;
   }
 
   > .col-sm-12 {
@@ -45,5 +72,11 @@
     > div {
       margin-bottom: 5px;
     }
+  }
+}
+
+.location--wrapper {
+  label {
+    margin-bottom: 0;
   }
 }

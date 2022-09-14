@@ -39,14 +39,13 @@ function SubscriberTemplate(props) {
     <>
       <Container className="subscriber">
         {user.isLoggedIn && subscriber && (
-          <div className="col-sm-12">
+          <>
+            <h1 className="page-header">{subscriber?.title}</h1>
             {subscriber?.field_logo?.url && (
               <div className="subscriber--logo">
                 <img
                   className="img-responsive"
                   src={subscriber?.field_logo?.url}
-                  width="275"
-                  height="53"
                   alt={`${subscriber?.title}`}
                 />
               </div>
@@ -98,7 +97,7 @@ function SubscriberTemplate(props) {
               </div>
             )}
             <div className="subscriber--locations">
-              <h2 className="title">Locations</h2>
+              <h2 className="sub-header">Locations</h2>
               <div className="header">
                 This view shows locations grouped by company id. You can adjust
                 the filters to limit the list to include only locations that are
@@ -184,7 +183,7 @@ function SubscriberTemplate(props) {
                 </tbody>
               </table>
             </div>
-          </div>
+          </>
         )}
       </Container>
     </>

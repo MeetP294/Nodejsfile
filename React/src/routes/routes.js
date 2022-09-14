@@ -16,14 +16,19 @@ import UserForm from "../templates/Account/UserForm";
 import UserDetail from "../templates/Account/UserDetail";
 import ContactForm from "../templates/Pages/ContactForm";
 import PackagesEditForm from "../templates/Pages/PackagesEditForm";
-import MergePdf from "../templates/MergePdf";
-import MergePdf2 from "../templates/MergeP";
+
 const ROUTES = [
   {
     path: "/",
     key: "HOME",
     exact: true,
     component: HomeTemplate,
+  },
+  {
+    path: "/",
+    key: "REDIRECT",
+    exact: true,
+    component: () => <Redirect to="/" />,
   },
   {
     path: "/user/login",
@@ -98,6 +103,12 @@ const ROUTES = [
     component: DefaultTemplate,
   },
   {
+    path: "/collections",
+    key: "COLLCTION-LANDING",
+    exact: true,
+    component: DefaultTemplate,
+  },
+  {
     path: "/subscribers/:subscriberId",
     key: "SUBSCRIBER",
     exact: true,
@@ -127,18 +138,6 @@ const ROUTES = [
     exact: false,
     component: PackagesEditForm,
   },
-  {
-    path:"/merge",
-    key: "Userid",
-    exact: false,
-    component: MergePdf,
-  },
-  {
-    path:"/merge2",
-    key: "Userid",
-    exact: false,
-    component: MergePdf2,
-  }
 ];
 
 export default ROUTES;

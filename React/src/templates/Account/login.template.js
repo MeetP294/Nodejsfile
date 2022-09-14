@@ -24,7 +24,7 @@ class LoginTemplate extends Component {
                 <AuthForm
                   onSuccess={() => {
                     // After login redirect back to homepage
-                    this.props.history.push(`/home`);
+                    this.props.history.push(`/`);
                   }}
                 />
               </Col>

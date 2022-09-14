@@ -11,7 +11,7 @@ const AppAccountMenu = (props) => {
   const { isLoggedIn } = props.user;
 
   const handleLogout = () => {
-    history.push("/home");
+    history.push("/");
     props.dispatch(
       userLogout()
     ).then((res) => {
@@ -37,8 +37,8 @@ const AppAccountMenu = (props) => {
           <Menu.Item key="/user">
             <Link to="/user">My Account</Link>
           </Menu.Item>
-          <Menu.Item key="/user/logout">
-            <input type="button" onClick={handleLogout} value="Logout" />
+          <Menu.Item key="/user/logout" className="logout-btn">
+            <input type="button" onClick={handleLogout} value="Log Out" />
           </Menu.Item>
         </Menu>
       ) : (
@@ -53,7 +53,7 @@ const AppAccountMenu = (props) => {
           selectedKeys={window.location.pathname}
           onClick={(...args) => console.log(args)}
         >
-          <Menu.Item key="/user/login">
+          <Menu.Item key="/user/login" className="login">
             <Link to="/user/login">Sign In / Register</Link>
           </Menu.Item>
         </Menu>

@@ -1,6 +1,22 @@
-@media (min-width:  1024px) {
+section.ant-layout.layout + .container {
+  min-height: 65vh;
+}
+
+@media (max-width: 767px) {
   section.ant-layout.layout + .container {
-    min-height: 65vh;
+    min-height: 50vh;
+  }
+}
+
+@media (max-height: 800px) {
+  section.ant-layout.layout + .container {
+    min-height: 50vh;
+  }
+}
+
+@media (min-width:  1100px) {
+  section.ant-layout.layout + .container {
+    min-height: 69vh;
   }
 }
 
@@ -19,6 +35,34 @@
   justify-content: center;
 }
 
+.page-header {
+  font-size: 2.4em;
+  color: #000;
+  font-weight: 700;
+  border: none;
+  margin: 20px 0px;
+}
+
+.sub-header {
+  font-weight: bold;
+  color: #bf2c37;
+  font-size: 1.8em;
+}
+
+.main-wrapper {
+  margin-bottom: 80px;
+}
+
+.app-wrapper-g a:not(.btn):not([href="#"]) {
+  color: #28a1c7;
+}
+
+.app-wrapper-g a:not(.btn):not([href="#"]):hover,
+.app-wrapper-g a:not(.btn):not([href="#"]):focus {
+  color: #1b6d87;
+  text-decoration: underline;
+}
+
 .form-control {
   display: block;
   width: 100%;
@@ -35,18 +79,70 @@
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 
+h2, .h2 {
+  font-size: 32px;
+}
+
+h3, .h3 {
+  font-size: 26px;
+}
+
+h4, .h4 {
+  font-size: 19px;
+}
+
+h5, .h5 {
+  font-size: 15px;
+}
+
+h6, .h6 {
+  font-size: 13px;
+}
+
+h4, .h4, h5, .h5, h6, .h6 {
+  margin-top: 10.5px;
+  margin-bottom: 10.5px;
+}
+
 .red {
   color: red;
+}
+
+.btn:not(.btn-group-sm):not(.btn-sm) {
+  font-size: 15px;
+  line-height: 1.42857143;
+  border-radius: 5px;
+  padding: 10px 18px;
+}
+
+.btn-sm, .btn-group-sm > .btn {
+  padding: 5px 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  border-radius: 5px;
+}
+
+.btn-danger {
+  background-color: #bf2c37;
+  border: #bf2c37;
+}
+
+.btn-danger:hover {
+  color: #ffffff;
+  background-color: #96222b;
+  border-color: #8d2129;
 }
 
 .table-responsive {
   width: 100%;
   max-width: 100%;
   overflow: auto;
+  border: none;
 }
 
 .table-responsive table {
   width: 100%;
+  word-break: normal;
 }
 
 .radio_Group {
@@ -69,6 +165,17 @@ input[type="checkbox"], input[type="radio"] {
 .radio_Group lable {
   margin-top: 15px;
   margin-left: 5px;
+}
+
+form .radio_Group label {
+  margin-top: 0 !important;
+}
+
+.help-block {
+  color: #999999;
+  font-size: 12px;
+  margin: 5px 0 10px;
+  padding: 0;
 }
 
 .TestMode {
@@ -103,6 +210,32 @@ div.MuiInputBase-root input {
   min-height: auto;
 }
 
+.txt-center {
+  text-align: center;
+}
+
+.txt-left {
+  text-align: left;
+}
+
+.txt-right {
+  text-align: right;
+}
+
+.legend-title {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 21px;
+  font-size: 22.5px;
+  font-weight: normal;
+  line-height: inherit;
+  color: #222222;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
 .mt10 {
   margin-top: 10px;
 }
@@ -125,6 +258,14 @@ div.MuiInputBase-root input {
 
 .mb30 {
   margin-bottom: 30px;
+}
+
+.no-mrgn-top {
+  margin-top: 0;
+}
+
+.no-mrgn-btm {
+  margin-bottom: 0;
 }
 
 div[data-testid="three-dots-loading"] {

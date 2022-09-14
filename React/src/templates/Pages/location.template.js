@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import "./page.template.less";
 import { getLocation } from "../../store/slices/packages";
 
 const LocationTemplate = () => {
@@ -16,8 +17,8 @@ const LocationTemplate = () => {
   return (
     <>
     
-        <div className="col-md-12 user-detail--wrapper">
-          <h1>{location?.title}</h1>
+        <div className="location--wrapper">
+          <h1 className="page-header">{location?.title}</h1>
           {location?.field_testing?.length > 0 &&
             <div className="location--testing inline-text">
               <label>Testing:&nbsp;</label>
